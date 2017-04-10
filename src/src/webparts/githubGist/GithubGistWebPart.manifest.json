@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "69687607-1f98-424c-a81a-3e62ec39369f",
+  "alias": "GithubGistWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "69687607-1f98-424c-a81a-3e62ec39369f",
+    "group": { "default": "Under Development" },
+    "title": { "default": "GithubGist" },
+    "description": { "default": "Show a gist from gihub" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "GithubGist"
+    }
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/githubGist/GithubGistWebPart.js",
+      "manifest": "./src/webparts/githubGist/GithubGistWebPart.manifest.json",
+      "outputPath": "./dist/github-gist.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "githubGistStrings": "webparts/githubGist/loc/{locale}.js"
+  }
+}

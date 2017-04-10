@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "gistpart",
+    "framework": "none",
+    "version": "1.0.0",
+    "libraryId": "bd6747e4-1eda-4c4d-aa7b-b56768c5a04e"
+  }
+}
