@@ -5,7 +5,7 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 //import { escape } from '@microsoft/sp-lodash-subset';
-import { SPComponentLoader } from '@microsoft/sp-loader';
+//import { SPComponentLoader } from '@microsoft/sp-loader';
 
 import styles from './GithubGist.module.scss';
 import * as strings from 'githubGistStrings';
@@ -39,9 +39,8 @@ export default class GithubGistWebPart extends BaseClientSideWebPart<IGithubGist
       superagent.get(`https://gist.github.com/${this.properties.gistId}.json`).use(jsonp).end((err, res) => {
         var content = this.domElement.querySelector(".gist-content");
         if (err) {
-      debugger;;
           content.classList.add(`${styles.error}`);
-          content.innerHTML = `Sadly there was an error. (${err})` 
+          content.innerHTML = `Sadly there was an error. (${err})`; 
         } else {
           content.classList.remove(`${styles.error}`);
           content.innerHTML = res.body.div;
@@ -50,7 +49,7 @@ export default class GithubGistWebPart extends BaseClientSideWebPart<IGithubGist
   * TODO: What if multiple WebParts all point to the same gist, sowing only different files?
   * we'd go fetch the full gist every time... this is not so good..
   */
-            var files = content.querySelectorAll(".gist-file")
+            var files = content.querySelectorAll(".gist-file");
             var toKeep = res.body.files.indexOf(this.properties.gistFile);
             if(toKeep > -1) {
               for(var i=0; i<files.length; i+=1){
