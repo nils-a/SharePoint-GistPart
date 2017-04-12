@@ -6,7 +6,15 @@
       "outputPath": "./dist/github-gist.bundle.js"
     }
   ],
-  "externals": {},
+  "externals": {
+    "superagent":{
+      "path": "node_modules/superagent/superagent.js"
+    },
+    "superagent-jsonp":{
+      "path": "node_modules/superagent-jsonp/dist/superagent-jsonp.js",
+      "globalDependencies": ["superagent"]
+    }
+  },
   "localizedResources": {
     "githubGistStrings": "webparts/githubGist/loc/{locale}.js"
   }

@@ -12,7 +12,7 @@
     "group": { "default": "Under Development" },
     "title": { "default": "GithubGist" },
     "description": { "default": "Show a gist from gihub" },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "Embed",
     "properties": {
       "description": "GithubGist"
     }

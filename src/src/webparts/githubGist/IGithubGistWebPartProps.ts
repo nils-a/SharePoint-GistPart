@@ -1,3 +1,5 @@
 export interface IGithubGistWebPartProps {
-  description: string;
+  title: string;
+  gistId: string;
+  gistFile: string;
 }
