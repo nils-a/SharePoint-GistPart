@@ -19,7 +19,8 @@
     "gulp": "~3.9.1",
     "@types/webpack-env": ">=1.12.1 <1.14.0",
     "@types/chai": ">=3.4.34 <3.6.0",
-    "@types/mocha": ">=2.2.33 <2.6.0"
+    "@types/mocha": ">=2.2.33 <2.6.0",
+    "@types/superagent": "^2.0.36"
   },
   "scripts": {
     "serve": "gulp serve",

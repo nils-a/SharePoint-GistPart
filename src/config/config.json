@@ -7,9 +7,14 @@
     }
   ],
   "externals": {
+    "superagent":{
+      "path": "node_modules/superagent/superagent.js",
+      "globalName" : "superagent"
+    },
     "superagent-jsonp":{
       "path": "node_modules/superagent-jsonp/dist/superagent-jsonp.js",
-      "globalName" : "superagentJSONP"
+      "globalName" : "superagentJSONP",
+      "globalDependencies": ["superagent"]
     }
   },
   "localizedResources": {

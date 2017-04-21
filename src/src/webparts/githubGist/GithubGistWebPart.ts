@@ -10,9 +10,8 @@ import {
 import styles from './GithubGist.module.scss';
 import * as strings from 'githubGistStrings';
 import { IGithubGistWebPartProps } from './IGithubGistWebPartProps';
-import * as superagent from 'superagent';
-//import { jsonp } from 'superagent-jsonp';
-declare var superagentJSONP: any; import 'superagent-jsonp'; var jsonp = superagentJSONP;// remove and switch with the line above, when https://github.com/lamp/superagent-jsonp/issues/25 is fixed
+var superagent = require("superagent");
+var jsonp = require("superagent-jsonp");
 
 export default class GithubGistWebPart extends BaseClientSideWebPart<IGithubGistWebPartProps> {
   private readonly gistEventName = "gistload";
@@ -86,7 +85,7 @@ export default class GithubGistWebPart extends BaseClientSideWebPart<IGithubGist
         this.extractGist(gistStore);
         return;
       }
-      gistStore.addEventListener(this.gistEventName, (e:CustomEvent) => {this.handleGistLoaded(e)}); //use () => {} to avoid "this" re-scoping
+      gistStore.addEventListener(this.gistEventName, (e:CustomEvent) => {this.handleGistLoaded(e);}); //use () => {} to avoid "this" re-scoping
       return;
     } else {
       // add a nice store for this gist then load it
@@ -102,7 +101,7 @@ export default class GithubGistWebPart extends BaseClientSideWebPart<IGithubGist
       gistStore.setAttribute("data-gist-id", domGistId);
       gistStore.setAttribute("data-load-state", "loading");
       storeContainer.appendChild(gistStore);
-      gistStore.addEventListener(this.gistEventName,(e:CustomEvent) => {this.handleGistLoaded(e)}); //use () => {} to avoid "this" re-scoping
+      gistStore.addEventListener(this.gistEventName,(e:CustomEvent) => {this.handleGistLoaded(e);}); //use () => {} to avoid "this" re-scoping
       superagent.get(`https://gist.github.com/${this.properties.gistId}.json`).use(jsonp).end((err, res) => {
         if (!!err) {
           var errContainer = document.createElement("div");
