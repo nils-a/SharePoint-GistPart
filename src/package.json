@@ -9,7 +9,6 @@
     "@microsoft/sp-client-base": "~1.0.0",
     "@microsoft/sp-core-library": "~1.0.0",
     "@microsoft/sp-webpart-base": "~1.0.0",
-    "@types/webpack-env": ">=1.12.1 <1.14.0",
     "superagent": "^3.5.2",
     "superagent-jsonp": "^0.1.1"
   },
@@ -18,12 +17,13 @@
     "@microsoft/sp-module-interfaces": "~1.0.0",
     "@microsoft/sp-webpart-workbench": "~1.0.0",
     "gulp": "~3.9.1",
+    "@types/webpack-env": ">=1.12.1 <1.14.0",
     "@types/chai": ">=3.4.34 <3.6.0",
     "@types/mocha": ">=2.2.33 <2.6.0"
   },
   "scripts": {
-    "build": "gulp bundle",
+    "serve": "gulp serve",
     "clean": "gulp clean",
-    "test": "gulp test"
+    "dist": "gulp --ship && gulp package-solution --ship"
   }
 }

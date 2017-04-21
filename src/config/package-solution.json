@@ -2,7 +2,7 @@
   "solution": {
     "name": "gistpart-client-side-solution",
     "id": "bd6747e4-1eda-4c4d-aa7b-b56768c5a04e",
-    "version": "1.0.0.0"
+    "version": "0.0.1.0"
   },
   "paths": {
     "zippedPackage": "solution/gistpart.sppkg"

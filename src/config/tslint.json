@@ -1,6 +1,6 @@
 {
   // Display errors as warnings
-  "displayAsWarning": true,
+  "displayAsWarning": false,
   // The TSLint task may have been configured with several custom lint rules
   // before this config file is read (for example lint rules from the tslint-microsoft-contrib
   // project). If true, this flag will deactivate any of these rules.
@@ -40,7 +40,7 @@
       "valid-typeof": true,
       "variable-name": false,
       "whitespace": false,
-      "prefer-const": true
+      //"prefer-const": true
     }
   }
 }
